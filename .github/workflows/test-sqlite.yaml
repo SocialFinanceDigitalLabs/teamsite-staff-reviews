@@ -1,0 +1,44 @@
+name: SQLite Unit Tests
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container: python:3.10
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache dependencies
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-poetry-deps-sqlite
+        with:
+          path: |
+            ~/.venv
+            ~/.cache/pypoetry
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pyproject.toml', '**/poetry.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install python dependencies
+        run: |
+          curl -sSL https://install.python-poetry.org | python -
+          cd $GITHUB_WORKSPACE/$TOOLS_REPO
+          $HOME/.local/bin/poetry install --all-extras
+
+      - name: Test
+        run: |
+          $HOME/.local/bin/poetry run coverage run --source='teamsite_staff_reviews' ./manage.py test --testrunner django.test.runner.DiscoverRunner
+          $HOME/.local/bin/poetry run coverage xml
+        env:
+          DJANGO_DEBUG: "True"
+          DATABASE_URL: "sqlite://:memory:"
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3

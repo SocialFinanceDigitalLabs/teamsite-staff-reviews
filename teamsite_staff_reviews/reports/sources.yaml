@@ -1,0 +1,57 @@
+sources:
+
+  - id: nomination
+    description: Nominations for reviewers
+    model: reviews.Nomination
+    sort:
+      - period_id
+      - reviewee__username
+    fields:
+      - id
+      - period_id
+      - reviewee_id
+      - reviewer_id
+      - external_name
+      - external_email
+      - reviewer_name
+      - role
+      - closes
+      - closes_override
+
+  - id: externalinvitation
+    description: External Invitations
+    model: reviews.ExternalInvitation
+    sort:
+      - nomination_id
+    fields:
+      - nomination_id
+      - user_id
+      - code
+
+  - model: reviews.ExternalInvitationMessage
+    id: externalinvitationmessage
+    fields:
+      - id
+      - invitation_id
+      - sent_time
+      - sent_by_id
+      - sent_to
+      - message
+
+  - model: reviews.ExternalUser
+    id: externaluser
+    fields:
+      - id
+      - email
+      - name
+      - is_enabled
+
+  - model: reviews.ReviewFormResponse
+    id: reviewformresponse
+    fields:
+      - id
+      - nomination_id
+      - question_id
+      - value
+      - created
+      - last_modified

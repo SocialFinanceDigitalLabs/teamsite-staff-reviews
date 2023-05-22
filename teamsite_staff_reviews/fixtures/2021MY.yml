@@ -1,0 +1,166 @@
+year: 2021
+period: MY
+
+forms:
+
+#################
+# Direct Report
+#################
+  - role: DR
+    title: Line Manager Review Form
+    description: |-
+      Thank you for taking the time to contribute to the feedback process.
+
+      When providing your feedback please consider the below points:
+
+      * Be constructive, consider language, tone and overall message –
+        how would you feel if you were reading this about yourself?
+      * None of the feedback should come as a surprise.
+      * To enable feedback to be fully understood and in the right context,
+        all feedback as part of the formal review process will be identifiable.
+
+    questions:
+      - title: How would you describe the experience of working with your line manager in the last six months?
+        description: |-
+          Some possible considerations when completing responses include (but are not limited to) the following:
+          * How have they contributed to a positive working environment?
+          * How effective have their communication been?
+          * Do they demonstrate effective listening skills?
+          * How have they supported you with your learning and development / what have you learned from them?
+          * How did they support your wellbeing?
+          * How did they display the Social Finance values in their work?
+
+#################
+# Manager
+#################
+  - role: PM
+    title: Manager Review Form
+    description: |-
+      As part of the End of Year Review process we are looking to gather feedback by asking targeted
+      questions to get more focussed responses on performance. This will allow the line manager to
+      get a clearer overview of their line report’s contributions and impact.
+
+      When sourcing/providing feedback please consider the below:
+
+      * Consider both business and internal projects when selecting people to provide feedback.
+      * Use specific examples when providing feedback including what they have achieved and
+        how they have approached their work.
+      * Be constructive in your feedback, consider language, tone and overall message –
+        how would you feel if you were reading this about yourself?
+      * None of the feedback should come as a surprise.
+      * To enable feedback to be fully understood and in the right context, all feedback
+        as part of the formal review process will be identifiable.
+
+    questions:
+      - title: What has been their most successful contribution to this project/their work in this period?
+        description: |-
+          Some possible considerations when completing responses include (but are not limited to) the following:
+          * How well have they delivered against the project objectives?
+          * What has gone particularly well and can be attributed to them personally?
+          * Have they shown a deep understanding of the issue they have worked on and the communities affected?
+          * How did they display the Social Finance values in their work?
+
+      - title: How have they worked with their team and external stakeholders?
+        description: |-
+          Some possible considerations when completing responses include (but are not limited to) the following:
+          * What contributions have they brought to fostering a positive team culture (either project/business
+            unit/broader Social Finance team)?
+          * How effective are they in their communication and collaboration with their stakeholders?
+          * How have they managed/met stakeholder expectations?
+
+      - title: Thinking about future development, what could this person do to continue to improve, and why?
+
+#################
+# Wider Team
+#################
+  - role: WT
+    title: Peer Review Form
+    description: |-
+      Thank you for taking the time to contribute to the feedback process. When providing your feedback please consider
+      the below points:
+
+      * Be constructive, consider language, tone and overall message – how would you feel if you were reading this
+        about yourself?
+      * None of the feedback should come as a surprise.
+      * To enable feedback to be fully understood and in the right context, all feedback as part of the formal review
+        process will be identifiable.
+
+    questions:
+      - title: How would you describe the experience of working with this person in the last six months?
+        description: |-
+          Some possible considerations when completing responses include (but are not limited to) the following:
+          * How have they contributed to a positive team working environment?
+          * How effective have their communications been?
+          * Do they demonstrate effective listenings skills?
+          * How have they supported you with your learning and development / what have you learned from them?
+          * How have they supported you with your wellbeing?
+          * How did they display the Social Finance values in their work?
+
+#################
+# External
+#################
+  - role: EX
+    title: External Review Form
+    description: |-
+      Thank you for providing feedback on this Social Finance staff member. The feedback you provide will be taken into
+      account as part of their End of Year Performance Assessment. We really appreciate your time in completing this
+      short survey. Should you have any issues please contact Jordan Jackson on 020 7770 6836 extension 5244.
+
+    questions:
+      - title: Against your expectations, how did this person deliver?
+        description: |-
+          Some considerations when answering this question:
+          * What value have their insights brought to your organisation?
+          * Have they shown a deep understanding of the issue they have worked on and the communities affected?
+          * How effective have their communications been with you/your team?
+
+      - title: What has been the most valuable contribution they have made?
+
+      - title: If they could have done one thing differently, what would it be and why?
+
+#################
+# Self-Assessment
+#################
+  - role: SA
+    title: Self-Assessment Form
+    description: |-
+      The self-assessment is an important tool to help frame the appraisal discussion between you and your line manager.
+      Completing the self-assessment is an opportunity to reflect on your own performance and areas you would like to
+      develop going forward.
+
+
+    questions:
+      - title: How do you feel you have performed against your objectives for the last six months?
+
+      - title: What do you consider to be your key strengths and how have they been demonstrated in the last six months?
+
+      - title: What do you think you areas for development are for the next six months?
+
+      - title: Any other comments
+        description: |-
+          Please use this area to express any other thoughts regarding your self-assessment.
+
+
+#################
+# Assessment - Part 1
+#################
+  - role: A1
+    title: Assessment - Part 1
+    description: |-
+      To be completed by line manager and returned to HR by **6pm Wednesday 23 June 2021**.
+
+    questions:
+      - title: Main achievements in the past six months (3 bullet points maximum)
+
+      - title: Main strengths evidenced in the past six months (3 bullet points maximum)
+
+      - title: Summary of feedback from direct reports (where relevant) or wider team members
+
+      - title: Development areas noted at the last review point (3 bullet points maximum)
+
+      - title: Key progress made against these development areas (3 bullet points maximum)
+
+      - title: Development goals for next six months (3 bullet points maximum)
+
+      - title: Proposed Social Finance actions to support development areas
+

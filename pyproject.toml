@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "teamsite-staff-reviews"
+version = "0.1.0"
+description = "MIT"
+authors = ["Kaj Siebert <kaj@k-si.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "teamsite_staff_reviews"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4.0.0"
+django-threadlocals = "^0.10"
+dateutils = "^0.6.0"
+xlsxwriter = {version = "^3.0.0", optional = true}
+djangorestframework = {version = "^3.14.0", optional = true}
+tablib = {version = "^3.0.0", optional = true}
+xlrd = {version = "^2.0.0", optional = true}
+pyyaml = "^6.0"
+graphene = {version = "^3.2.0", optional = true}
+graphene-django = {version = "^3.0.0", optional = true}
+django-filter = {version = "^23.0", optional = true}
+django-admin-autocomplete-filter = "^0.7.1"
+
+[tool.poetry.extras]
+report = ["xlsxwriter", "xlrd", "tablib"]
+api = ["djangorestframework"]
+graphql = ["graphene", "graphene-django", "django-filter"]
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^7.2.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

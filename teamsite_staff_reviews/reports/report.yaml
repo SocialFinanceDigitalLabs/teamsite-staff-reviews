@@ -1,0 +1,95 @@
+description: All the review data
+tables:
+  - name: Nomination
+    source: nomination
+    fields:
+      - key: id
+        label: ID
+      - key: period_id
+        label: Period ID
+        width: 15
+      - key: reviewee_id
+        label: Reviewee ID
+        width: 15
+      - key: reviewer_id
+        label: Reviewer ID
+        width: 15
+      - key: reviewer_name
+        label: Reviewer Name
+        width: 15
+      - key: external_name
+        label: External Name
+        width: 15
+      - key: external_email
+        label: External Email
+        width: 15
+      - key: role
+        label: Role
+      - key: closes
+        label: Closes Date
+        num_format: yyyy-mm-dd HH:mm:ss
+        width: 19
+      - key: closes_override
+        label: Closes Date (Override)
+        num_format: yyyy-mm-dd HH:mm:ss
+        width: 19
+
+  - name: ExternalInvitation
+    source: externalinvitation
+    fields:
+      - key: nomination_id
+        label: Nomination ID
+      - key: user_id
+        label: External User ID
+      - key: code
+        label: Code
+
+  - name: ExternalInvitationMessage
+    source: externalinvitationmessage
+    fields:
+      - key: id
+        label: ID
+      - key: invitation_id
+        label: Nomination ID
+      - key: sent_time
+        label: Sent Time
+        num_format: yyyy-mm-dd HH:mm:ss
+        width: 19
+      - key: sent_by_id
+        label: Sent By User ID
+      - key: sent_to
+        label: Sent To
+      - key: message
+        label: Message
+
+  - name: ExternalUser
+    source: externaluser
+    fields:
+      - key: id
+        label: ID
+      - key: email
+        label: Email
+      - key: name
+        label: Name
+      - key: is_enabled
+        label: Enabled
+
+  - name: Responses
+    source: reviewformresponse
+    fields:
+      - key: id
+        label: ID
+      - key: nomination_id
+        label: Nomination ID
+      - key: question_id
+        label: Question ID
+      - key: value
+        label: Value
+      - key: created
+        label: Created
+        num_format: yyyy-mm-dd HH:mm:ss
+        width: 19
+      - key: last_modified
+        label: Last Modified
+        num_format: yyyy-mm-dd HH:mm:ss
+        width: 19
